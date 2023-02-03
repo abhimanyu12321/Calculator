@@ -39,10 +39,10 @@ function reducer(state, { type, payload }) {
           ...state,
           operation: payload.operand,
           previousoperand: state.currentoperand,
-          currentoperand: null,
+          currentoperand: '',
         }
 
-      if (state.currentoperand == null) {
+      if (state.currentoperand === '') {
         return {
           ...state,
           operation: payload.operand
@@ -53,7 +53,7 @@ function reducer(state, { type, payload }) {
         ...state,
         previousoperand: evaluate(state.currentoperand, state.previousoperand, state.operation),
         operation: payload.operand,
-        currentoperand: null
+        currentoperand: ''
       }
 
 
@@ -63,7 +63,7 @@ function reducer(state, { type, payload }) {
 
 
     case ACTIONS.EVALUATE:
-      if (state.previousoperand == null || state.operation == null || state.currentoperand == null) {
+      if (state.previousoperand == null || state.operation == null || state.currentoperand === '') {
         return state
       }
 
@@ -81,14 +81,14 @@ function reducer(state, { type, payload }) {
         return {
           ...state,
           overwrite: false,
-          currentoperand: null
+          currentoperand: ''
         }
       }
       if (state.currentoperand == null) return state
       if (state.currentoperand.lenght === 1) {
         return {
           ...state,
-          currentoperand: null
+          currentoperand: ''
         }
       }
 
