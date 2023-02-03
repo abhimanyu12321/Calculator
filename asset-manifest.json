@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Calculator-useing-React-Tailwind/static/css/main.be17f4ae.css",
+    "main.js": "/Calculator-useing-React-Tailwind/static/js/main.d08e2f4a.js",
+    "index.html": "/Calculator-useing-React-Tailwind/index.html",
+    "main.be17f4ae.css.map": "/Calculator-useing-React-Tailwind/static/css/main.be17f4ae.css.map",
+    "main.d08e2f4a.js.map": "/Calculator-useing-React-Tailwind/static/js/main.d08e2f4a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be17f4ae.css",
+    "static/js/main.d08e2f4a.js"
+  ]
+}
