@@ -58,7 +58,7 @@ function reducer(state, { type, payload }) {
 
 
     case ACTIONS.CLEAR:
-      return {}
+      return {currentoperand:''}
 
 
 
@@ -128,9 +128,9 @@ function evaluate(currentoperand, previousoperand, operation) {
 }
 
 function App() {
-  const [{ currentoperand, previousoperand, operation }, dispatch] = useReducer(reducer, {});
+  const [{ currentoperand, previousoperand, operation }, dispatch] = useReducer(reducer, {currentoperand:''});
 
-
+   
   return (
     <div className="container min-h-[100vh] w-[100vw] bg-gradient-to-r from-[#2563eb] to-[#16a34a] flex items-center justify-center">
       <div className=" max-w-[70vw] calculator min-h-[70vh]  grid grid-cols-[repeat(4,5rem)] grid-rows-[minmax(7rem,auto) repeat(5,4rem)] justify-center gap-0 shadow-2xl">
