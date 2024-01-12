@@ -3,21 +3,13 @@ import Operationbutton from "./components/Operationbutton";
 import Spanbutton from "./components/Spanbutton";
 import { useReducer } from "react";
 import { ACTIONS, reducer } from "./utils/reducerAction.js";
+import { ModifyOperation } from "./utils/modify.js";
 
 
 
 function App() {
   const [{ currentoperand, previousoperand, operation }, dispatch] = useReducer(reducer, { currentoperand: '0' });
-  console.log(currentoperand)
 
-  function ModifyOperation(str, size) {
-    if (str === '*-') return str;
-    else if (str === '÷-') return str;
-    else if (str === '+-') return str;
-    else {
-      return str[size - 1]
-    }
-  }
   if (operation !== '' && operation !== undefined && operation !== null) { ModifyOperation(operation, operation.length) }
   return (
     <div className="container min-h-[100vh] w-[100vw] bg-gradient-to-r from-[#2563eb] to-[#16a34a] flex items-center justify-center">
